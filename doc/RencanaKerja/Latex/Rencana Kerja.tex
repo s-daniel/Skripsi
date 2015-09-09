@@ -1,0 +1,139 @@
+\documentclass[a4paper,twoside]{article}
+\usepackage[T1]{fontenc}
+\usepackage[bahasa]{babel}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{float}
+\usepackage[cm]{fullpage}
+\pagestyle{myheadings}
+\usepackage{etoolbox}
+\usepackage{setspace}
+\usepackage{lipsum}
+\setlength{\headsep}{30pt}
+\usepackage[inner=2cm,outer=2.5cm,top=2.5cm,bottom=2cm]{geometry} %margin
+% \pagestyle{empty}
+
+\makeatletter
+\renewcommand{\@maketitle} {\begin{center} {\LARGE \textbf{ \textsc{\@title}} \par} \bigskip {\large \textbf{\textsc{\@author}} }\end{center} }
+\renewcommand{\thispagestyle}[1]{}
+\markright{\textbf{\textsc{AIF401 \textemdash Rencana Kerja Skripsi \textemdash Sem. Ganjil 2015/2016}}}
+
+\onehalfspacing
+
+\begin{document}
+
+\title{\@judultopik}
+\author{\nama \textendash \@npm}
+
+%tulis nama dan NPM anda di sini:
+\newcommand{\nama}{Steven Daniel}
+\newcommand{\@npm}{2012730021}
+\newcommand{\@judultopik}{Penentuan Tingkat Kemacetan Berdasarkan Twitter Menggunakan Jaringan Syaraf Tiruan} % Judul/topik anda
+\newcommand{\jumpemb}{1} % Jumlah pembimbing, 1 atau 2
+\newcommand{\tanggal}{8/27/2015}
+\maketitle
+
+\pagenumbering{arabic}
+
+\section{Deskripsi}
+Pertumbuhan jumlah kendaraan di Indonesia setiap tahunnya selalu mengalami peningkatan yang positif, namun pertumbuhan tersebut tidak diimbangi dengan pertumbuhan panjang jalan. Dan hal tersebut mengakibatkan kepadatan lalu-lintas. Ditambah pengendaran yang tidak mematuhi rambu-rambu lalu-lintas akan memperparah kemacetan.\\\\
+Twitter adalah media sosial yang memiliki jumlah pengguna di Indonesia mencapai angka 50 juta pada tahun 2015. Pengguna Twitter di Indonesia juga ternyata cukup aktif dalam memberikan \textit{tweets}. Grup analis bernama Semiocast mencatat, pengguna Twitter di kota bandung menyumbang lebih dari 1 miliar \textit{tweets} sepanjang bulan juni 2012. Jumlah \textit{tweets} yang banyak memudahkan kita untuk mencari informasi pada Twitter. Informasi yang dapat kita cari salah satunya mengenai keadaan lalu lintas suatu jalan.\\\\
+\textit{API} adalah kepanjangan dari \textit{"Application Programming Interface"}. \textit{API} ialah sebuah cara yang ditetapkan sebuah program untuk menyelesaikan sebuah tugas, biasanya dengan menerima atau memodifikasi data. Twitter menyediakan sebuah \textit{API} yang memberikan hak akses kepada pengembang perangkat lunak untuk membaca dan menulis data dari server Twitter. Dalam pemograman berbahasa Java ada sebuah \textit{library} bernama Twitter4J yang membungkus Twitter API. \textit{Library} ini memudahkan \textit{programmer} Java dalam mengembangkan sebuah perangkat lunak yang memanfaatkan Twitter \textit{API}.\\\\
+Jaringan Saraf Tiruan(JST) adalah model komputasi yang terinspirasi dari cara kerja sistem saraf biologi. Sama seperti sistem saraf biologi, JST memiliki neuron-neuron yang dapat meneruskan sinyal apabila sinyal yang dihantarkan melewati nilai tertentu. JST sendiri dapat digunakan untuk menyelesaikan masalah yang rumit. JST juga dapat digunakan untuk membuat sebuah kesimpulan berdasarkan informasi yang ada. Jenis JST yang sering digunakan untuk menyimpulkan suatu informasi ialah Feed Forward Neural Network. Feed Forward Neural Network minimal terdiri dari 3 layer utama yaitu \textit{input layer}, \textit{hidden layer}, dan \textit{output layer}. Feed Forward Neural Network akan menerima sinyal-sinyal dan akan diteruskan ke \textit{output layer}.\\\\
+Kemacetan yang sering terjadi berdampak buruk pada kehidupan masyarakat. Solusinya dengan membangun perangkat lunak yang dapat menentukan tingkat kemacetan berdasarkan \textit{tweets} dari Twitter. Perangkat lunak akan mengambil \textit{tweets} menggunakan \textit{library} Java Twitter4J. Perangkat lunak akan memproses \textit{tweets} menggunakan Feed Forward Neural Network. Dengan adanya perangkat lunak ini pengguna dapat menghindari kemacetan.
+\section{Rumusan Masalah}
+Berdasarkan deskripsi diatas, rumusan masalah adalah sebagai berikut:
+\begin{itemize}
+	\item Bagaimana melakukan pengambilan \textit{tweets} dari Twitter?
+	\item Bagaimana memodelkan teks / kata kunci pada \textit{tweets} di Twitter menjadi sinyal-sinyal pada Jaringan Syaraf Tiruan?
+	\item Bagaimana menentukan batas waktu \textit{tweets} yang relevan untuk menjadi input JST?
+	\item Bagaimana menentukan jumlah \textit{hidden layer} dan \textit{jumlah neuron} pada JST?
+	\item Bagaimana mengimplementasikan JST kedalam bahasa Java?
+	\item Apa metode pembelajaran yang akan digunakan pada JST?
+	\item Bagaimana cara melatih Jaringan Syaraf Tiruan?
+\end{itemize}
+\section{Tujuan}
+Karya tulis ilmiah ini bertujuan membangun sebuah perangkat lunak yang dapat:
+\begin{itemize}
+	\item Mengambil \textit{tweets} dari Twitter secara \textit{programmatic}.
+	\item Memodelkan teks / kata kunci pada \textit{tweets} menjadi sinyal-sinyal pada JST.
+	\item Menentukan batas waktu \textit{tweets} yang relevan untuk menjadi input JST
+	\item Mengimplementasikan JST kedalam bahasa Java.
+	\item Menentukan jumlah \textit{hidden layer} dan \textit{jumlah neuron} pada JST.
+	\item Menentukan metode pembelajaran yang digunakan pada JST.
+	\item Melatih Jaringan Syaraf Tiruan.
+\end{itemize}
+\section{Deskripsi Perangkat Lunak}
+Kemampuan yang dimiliki perangkat lunak antara lain:
+\begin{itemize}	
+	\item Perangkat lunak dapat mengambil tweets dari Twitter.
+	\item Perangkat lunak dapat dilakukan proses pembelajaran.
+	\item Pengguna dapat mendapatkan informasi tingkat kemacetan suatu jalan.
+\end{itemize}
+
+\section{Rencana Kerja}
+Rencana kerja untuk menyelesaikan skripsi ini:
+\begin{itemize}
+	\item Pada saat mengambil kuliah AIF401 Skripsi 1
+	\begin{enumerate}
+		\item Melakukan studi literatur tentang JST.
+		\item Mempelajari \textit{library} Java yang bernama Twitter4j.
+		\item Mempelajari karakteristik \textit{tweets} yang di kirimkan pengguna Twitter di Indonesia.
+		\item Merancang \textit{tweets} menjadi sinyal JST.
+		\item Merancang JST kedalam bahasa Java.
+		\item Merancang bentuk JST dan proses pembelajaranya.
+	\end{enumerate}
+	\item Pada saat mengambil kuliah AIF401 Skripsi 2
+	\begin{enumerate}
+		\item Merancang dan mengimplementasikan JST dan proses pembelajaranya kedalam bahasa Java.
+		\item Mengumpulkan uji kasus untuk melatih JST.
+		\item Melakukan proses pembelajaran pada JST.
+		\item Menentukan jumlah hidden layer dan jumlah neuron.
+		\item Melakukan pengujian dan eksperimen.
+		\item Membuat dokumentasi skripsi
+	\end{enumerate}
+\end{itemize}
+
+\section{Isi {\it Progress Report} Skripsi 1}
+Isi dari {\it Progress Report} Skripsi 1 yang akan diselesaikan dan dilaporkan ke pembimbing paling lambat 2 minggu sebelum tenggat waktu yang ditetapkan koordinator adalah :
+\begin{enumerate}
+	\item Hasil eksperimen penggunaan Twitter4J.
+	\item Rancangan Model JST yang akan digunakan.
+	\item \ldots (to be continued)
+\end{enumerate}
+Estimasi persentase penyelesaian skripsi sampai dengan {\it Progress Report} Skripsi 1 adalah : 99\%
+
+\section{Pernyataan Khusus}
+Berlatar belakang perihal kejujuran serta keterbasan jumlah dosen, saya menyatakan akan mematuhi aturan-aturan khusus berikut:
+\begin{enumerate}
+	\item Skripsi adalah hasil karya saya sendiri. Peran teman / orang lain adalah untuk membantu pemahaman, tetapi tidak dalam konten Skripsi.
+	\item Saya menetapkan batasan yang jelas antara konten saya, dengan buatan orang lain (termasuk kode yang diambil dari {\it open source project})
+	\item Pengambilan kedua hanya akan dilakukan hanya jika sudah memenuhi minimal 90\% dari target.
+\end{enumerate}
+Saya bersedia mematuhi peraturan di atas, dan bersedia menerima sanksi pembatalan pengambilan Skripsi dengan dosen pembimbing terkait jika terbukti melanggar. Peraturan ini berlaku pada Skripsi 1 dan 2.
+
+\vspace{1.5cm}
+
+\centering Bandung, \tanggal\\
+\vspace{2cm} \nama \\
+\vspace{1cm}
+
+Menyetujui, \\
+\ifdefstring{\jumpemb}{2}{
+\vspace{1.5cm}
+\begin{centering} Menyetujui,\\ \end{centering} \vspace{0.75cm}
+\begin{minipage}[b]{0.45\linewidth}
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013 \\
+\vspace{2cm} Nama: \makebox[3cm]{\hrulefill}\\ Pembimbing Utama
+\end{minipage} \hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013\\
+\vspace{2cm} Nama: \makebox[3cm]{\hrulefill}\\ Pembimbing Pendamping
+\end{minipage}
+\vspace{0.5cm}
+}{
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013\\
+\vspace{2cm} Nama: \makebox[3cm]{\hrulefill}\\ Pembimbing Tunggal
+}
+
+\end{document} 
