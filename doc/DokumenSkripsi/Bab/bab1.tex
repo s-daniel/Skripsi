@@ -1,52 +1,62 @@
 \chapter{Pendahuluan}
 \section{Latar Belakang}
-Setiap tahun pertumbuhan jumlah kendaraan di Bandung selalu mengalami peningkatan. Ironisnya, pertumbuhan tersebut tidak diimbangi dengan pertumbuhan pembangunan jalan yang seimbang. Akibatnya, hal tersebut mengakibatkan kepadatan lalu-lintas. Kepadatan tersebut semakin diperparah dengan banyaknya pengendara yang tidak mematuhi rambu-rambu lalu-lintas.\\\\
-Twitter merupakan salah satu media sosial yang populer di dunia, Melalui Twitter, netizens dapat saling bertukar informasi secara cepat, sehingga informasi dapat tersebar ke seluruh dunia dalam hitungan beberapa detik saja melalui \textit{tweets} yang mereka kirimkan. Pada tahun 2015 tercatat pengguna Twitter di Indonesia melebihi 50 juta orang. Sebuah perusahaan analis bernama Semiocast mencatat, pengguna Twitter di kota Bandung menyumbang lebih dari 1 miliar \textit{tweets} sepanjang bulan juni 2012.\\\\
-API (Application Programming Interface) merupakan sebuah cara yang didefinisikan sebuah program untuk
-menyelesaikan sebuah tugas, biasanya dengan menerima atau memodifikasi data. Twitter menyediakan
-sebuah API yang memberikan hak akses kepada pengembang perangkat lunak untuk membaca dan menulis data dari server Twitter. Dalam pemograman berbahasa Java ada sebuah library bernama Twitter4J yang membungkus Twitter API. Library ini memudahkan programmer Java dalam mengembangkan sebuah perangkat lunak yang memanfaatkan Twitter API.\\\\
-Jaringan Saraf Tiruan(JST) adalah model komputasi yang terinspirasi dari cara kerja sistem saraf biologi.Sama seperti sistem saraf biologi, JST memiliki neuron-neuron yang dapat meneruskan sinyal apabila sinyal yang dihantarkan melewati nilai tertentu. JST sendiri digunakan untuk menyelesaikan masalah yang rumit. JST juga digunakan untuk membuat sebuah kesimpulan berdasarkan informasi yang ada.\\\\
-Salah satu solusi mengatasi kemacetan pada penelitian ini adalah dengan membuat sebuah perangkat lunak yang dapat menentukan tingkat kemacetan berdasarkan \textit{tweets} dari Twitter. Perangkat lunak akan mengambil \textit{tweets} menggunakan library Java Twitter4J. Perangkat lunak akan memproses \textit{tweets} menggunakan Feed Forward Neural Network. Keberadaan perangkat lunak diharapkan dapat membantu netizen dalam menghindari kemacetan.
-
+Setiap tahun pertumbuhan jumlah kendaraan di Bandung selalu mengalami peningkatan \cite{KendaraanMotorBandung:2014}. Namun, pertumbuhan tersebut tidak diimbangi dengan pertumbuhan pembangunan jalan yang seimbang \cite{PanjangJalanBandung:2014}. Akibatnya, hal tersebut mengakibatkan kepadatan lalu lintas.\\\\
+Twitter adalah sebuah jaringan informasi \cite{TwitterDef:2015}. Melalui Twitter, \textit{netizens} dapat saling bertukar informasi secara cepat. Pengguna Twitter di Bandung ternyata cukup aktif dalam menggunakan Twitter.  Sebuah lembaga pemantau media sosial bernama Semiocast mencatat, pengguna Twitter di kota Bandung menyumbang lebih dari 100 juta \textit{tweets} sepanjang bulan juni 2012.\\\\
+API (Application Programming Interface) merupakan sebuah cara yang didefinisikan sebuah program untuk menyelesaikan sebuah tugas, biasanya dengan menerima atau memodifikasi data \cite{TwitterApi:2015}. Twitter menyediakan sebuah API yang memberikan hak akses kepada pengembang perangkat lunak untuk membaca dan menulis data dari server Twitter. Dalam pemograman bahasa Java ada sebuah \textit{library} tidak resmi bernama Twitter4J yang membungkus Twitter API. \textit{Library} ini memudahkan \textit{programmer} Java dalam mengembangkan sebuah perangkat lunak yang memanfaatkan Twitter API \cite{Twitter4j:2015}.\\\\
+Jaringan Saraf Tiruan (JST) adalah model komputasi yang terinspirasi dari cara kerja sistem saraf biologi \cite{WhatisNN:2015}. Sama seperti sistem saraf biologi, JST memiliki neuron-neuron yang dapat meneruskan sinyal apabila sinyal yang dihantarkan melewati nilai tertentu. JST sendiri digunakan untuk menyelesaikan masalah yang rumit. JST juga digunakan untuk membuat sebuah kesimpulan berdasarkan informasi yang ada.\\\\
+Salah satu solusi mengatasi kemacetan pada penelitian ini adalah dengan membuat sebuah perangkat lunak yang dapat memprediksi tingkat kemacetan berdasarkan \textit{tweets} dari Twitter. Perangkat lunak akan mengambil \textit{tweets} menggunakan \textit{library} Java Twitter4J. Perangkat lunak akan memproses \textit{tweets} menggunakan Jaringan Syaraf Tiruan. Keberadaan perangkat lunak diharapkan dapat membantu \textit{netizens} dalam menghindari kemacetan.
 \section{Identifikasi Masalah}
-Dari observasi awal yang telah dilakukan, ada beberapa masalah yang dapat diidentifikasikan, diantaranya sebagai berikut:
+Dari observasi awal yang telah dilakukan, ada masalah yang dapat diidentifikasikan, diantaranya sebagai berikut :
 \begin{enumerate}
 	\item Kemacetan di kota Bandung.
-	\item Penumpukan jumlah kendaraan jalur tertentu.
-\end{enumerate}
-
-\section{Batasan Masalah}
-Karena keterbatasan waktu yang dimiliki penulis, maka ruang lingkup penelitian yang dilakukan dibatasi untuk beberapa hal berikut:
-\begin{enumerate}
-	\item Peneliti hanya memprediksi tingkat kemacetan di kota Bandung
-	\item Peneliti ini menggunakan bahasa Java dalam pengembangan perangkat lunak
-	\item Peneliti hanya menggunakan data yang berasal dari Twitter dengan kriteria \textit{tweets} berumur kurang dari 5 tahun, bahasa Indonesia, dan berlokasi bandung.
 \end{enumerate}
 \section{Rumusan Masalah}
-Berdasarkan deskripsi diatas, rumusan masalah adalah sebagai berikut:
+Berdasarkan deskripsi diatas, rumusan masalah adalah sebagai berikut :
 \begin{enumerate}
 	\item Bagaimana melakukan pengambilan \textit{tweets} dari Twitter?
-	\item Bagaimana memodelkan teks / kata kunci pada \textit{tweets} di Twitter menjadi sinyal-sinyal pada Jaringan
-Syaraf Tiruan?
-	\item Apa kriteria \textit{tweets} yang relevan untuk menjadi input JST?
-	\item Apa yang menjadi output dari JST?
-	\item Jenis JST apa yang cocok dipakai pada penelitian ini?
-	\item Bagaimana mengimplementasikan JST kedalam bahasa Java?
-	\item Apa metode pembelajaran yang akan digunakan pada JST?
+	\item Bagaimana memilih, memodelkan, dan menyimpan \textit{tweets} dari Twitter menjadi sinyal-sinyal pada Jaringan Syaraf Tiruan?
+	\item Bagaimana menentukan jenis dan konfigurasi pada JST untuk memprediksi kemacetan?
 	\item Bagaimana cara melatih Jaringan Syaraf Tiruan?
-	\item Bagaimana memprediksi tingkat kemacetan di kota Bandung.
+	\item Bagaimana memprediksi tingkat kemacetan di kota Bandung?
 \end{enumerate}
-
 \section{Tujuan}
-Karya tulis ilmiah ini bertujuan untuk:
+Karya tulis ilmiah ini bertujuan untuk :
 \begin{enumerate}
 	\item Mengambil \textit{tweets} dari Twitter secara \textit{programmatic}.
-	\item Memodelkan teks / kata kunci pada \textit{tweets} menjadi sinyal-sinyal pada JST.
-	\item Menentukan kriteria \textit{tweets} yang relevan untuk menjadi input JST.
-	\item Menentukan output dari JST.
-	\item Mengimplementasikan JST kedalam bahasa Java.
-	\item Menentukan konfigurasi jaringan pada JST agar cocok dapat penentuan tingkat kemacetan.
-	\item Menentukan metode pembelajaran yang digunakan pada JST.
-	\item Melatih JST untuk dapat menentukan tingkat kemacetan.
+	\item Memilih, memodelkan, dan menyimpan \textit{tweets} menjadi sinyal-sinyal pada JST.
+	\item Menentukan jenis dan konfigurasi pada JST untuk memprediksi kemacetan.
+	\item Melatih Jaringan Syaraf Tiruan.
 	\item Memprediksi tingkat kemacetan di kota Bandung.
+\end{enumerate}
+\section{Batasan Masalah}
+Karena keterbatasan waktu yang dimiliki penulis, maka ruang lingkup penelitian yang dilakukan dibatasi untuk beberapa hal berikut :
+\begin{enumerate}
+	\item Penelitian ini hanya memprediksi tingkat kemacetan hanya di 10 jalan di kota Bandung.
+	\item Penelitian ini hanya menggunakan data yang berasal dari Twitter dengan kriteria \textit{tweets} berumur kurang dari 5 tahun, bahasa Indonesia, dan berlokasi Bandung.
+\end{enumerate}
+\section{Metode Penelitian}
+Berikut adalah Metode Penelitian yang digunakan :
+\begin{enumerate}
+	\item Melakukan studi mengenai Twitter API, \textit{library} Java Twitter4J, Jaringan Syaraf Tiruan, SQL.
+	\item Merancang penyimpanan data.
+	\item Mengambil dan menyaring \textit{tweets} dari Twitter sebagai input JST menggunakan Twitter4j
+	\item Mengimplementasikan JST kedalam bahasa Java.
+	\item Melatih JST
+	\item Melakukan eksperimen dan pengujian
+\end{enumerate}
+\section{Sistematika Penulisan}
+Sistematika penulisan setiap bab pada skripsi ini adalah sebagai berikut :
+\begin{enumerate}
+	\item Bab Pendahuluan\\
+	Bab 1 berisikan latar belakang, identifikasi masalah, rumusan masalah, tujuan, metode penelitian, sistematika penulisan dari penelitian yang dilakukan
+	\item Bab 2 Dasar Teori\\ 
+	Bab 2 berisikan teori-teori yang menunjang penelitian yang dilakukan. Teori yang digunakan dalam penelitian ini, sebagai berikut : Twitter API, SQL, \textit{library} Twitter4j, Jaringan Syaraf Tiruan.
+	\item Bab 3 Analisis\\
+	Bab 3 berisikan analisis yang dilakukan pada penelitian ini, Analisis yang dilakukan adalah sebagai berikut : Analisis Twitter API, analisis sifat / karakter \textit{tweets} yang akan digunakan, analisis JST yang akan digunakan, analisis perangkat lunak yang akan dibangun.
+	\item Bab 4 Perancangan perangkat lunak\\
+	Bab 4 berisikan perancangan dari aplikasi JST yang dapat memprediksi kemacetan di Kota Bandung
+	\item Bab 5 Implementasi perangkat lunak\\
+	Bab 5 berisikan implementasi dan pengujian dari perangkat lunak JST yang dapat memprediksi kemacetan di Kota Bandung
+	\item Bab 6 Kesimpulan\\
+	Bab 6 berisikan kesimpulan dan saran dari penelitian JST memprediksi kemacetan di Kota Bandung
 \end{enumerate}
