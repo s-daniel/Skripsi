@@ -1,0 +1,132 @@
+\documentclass[a4paper,twoside]{article}
+\usepackage[T1]{fontenc}
+\usepackage[bahasa]{babel}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{float}
+\usepackage[cm]{fullpage}
+\pagestyle{myheadings}
+\usepackage{etoolbox}
+\usepackage{setspace} 
+\usepackage{lipsum} 
+\setlength{\headsep}{30pt}
+\usepackage[inner=2cm,outer=2.5cm,top=2.5cm,bottom=2cm]{geometry} %margin
+% \pagestyle{empty}
+
+\makeatletter
+\renewcommand{\@maketitle} {\begin{center} {\LARGE \textbf{ \textsc{\@title}} \par} \bigskip {\large \textbf{\textsc{\@author}} }\end{center} }
+\renewcommand{\thispagestyle}[1]{}
+\markright{\textbf{\textsc{Laporan Perkembangan Pengerjaan Skripsi\textemdash Sem. Ganjil 2015/2016}}}
+
+\onehalfspacing
+ 
+\begin{document}
+
+\title{\@judultopik}
+\author{\nama \textendash \@npm} 
+
+%ISILAH DATA DATA BERIKUT INI:
+\newcommand{\nama}{Steven Daniel}
+\newcommand{\@npm}{2012730021}
+\newcommand{\tanggal}{11/10/2015} %Tanggal pembuatan dokumen
+\newcommand{\@judultopik}{Memprediksi Kemacetan di Kota Bandung Menggunakan Jaringan Syaraf Tiruan} % Judul/topik anda
+\newcommand{\kodetopik}{PAS3906}
+\newcommand{\jumpemb}{1} % Jumlah pembimbing, 1 atau 2
+\newcommand{\pembA}{Pascal Alfadian}
+\newcommand{\pembB}{-}
+\newcommand{\semesterPertama}{7} % semester pertama kali topik diambil, angka 1 dimulai dari sem Ganjil 96/97
+\newcommand{\lamaSkripsi}{0.5} % Jumlah semester untuk mengerjakan skripsi s.d. dokumen ini dibuat
+\newcommand{\kulPertama}{Skripsi 1} % Kuliah dimana topik ini diambil pertama kali
+\newcommand{\tipePR}{B} % tipe progress report :
+% A : dokumen pendukung untuk pengambilan ke-2 di Skripsi 1
+% B : dokumen untuk reviewer pada presentasi dan review Skripsi 1
+% C : dokumen pendukung untuk pengambilan ke-2 di Skripsi 2
+\maketitle
+
+\pagenumbering{arabic}
+
+\section{Data Skripsi} %TIDAK PERLU MENGUBAH BAGIAN INI !!!
+Pembimbing utama/tunggal: {\bf \pembA}\\
+Pembimbing pendamping: {\bf \pembB}\\
+Kode Topik : {\bf \kodetopik}\\
+Topik ini sudah dikerjakan selama : {\bf \lamaSkripsi} semester\\
+Pengambilan pertama kali topik ini pada : Semester {\bf \semesterPertama} \\
+Pengambilan pertama kali topik ini di kuliah : {\bf \kulPertama} \\
+Tipe Laporan : {\bf \tipePR} -
+\ifdefstring{\tipePR}{A}{
+			Dokumen pendukung untuk {\BF pengambilan ke-2 di Skripsi 1} }
+		{
+		\ifdefstring{\tipePR}{B} {
+				Dokumen untuk reviewer pada presentasi dan {\bf review Skripsi 1}}
+			{	Dokumen pendukung untuk {\bf pengambilan ke-2 di Skripsi 2}}
+		}
+
+\section{Detail Perkembangan Pengerjaan Skripsi}
+Detail bagian pekerjaan skripsi sesuai dengan rencan kerja/laporan perkembangan terkahir :
+	\begin{enumerate}
+		\item Melakukan studi literatur mengenai Jaringan Syaraf Tiruan.\\
+		{\bf status :} Ada sejak rencana kerja skripsi.\\
+		{\bf hasil :} 
+		
+		\item Mempelajari \textit{library} Java bernama Twitter4J.\\
+		{\bf status :} Ada sejak rencana kerja skripsi.\\
+		{\bf hasil :} Berhasil melakukan streaming data Twitter dan mengambil tweets dari Twitter dalam 1 minggu terakhir.
+
+		\item Menulis dokumen skripsi\\
+		{\bf status :} Ada sejak rencana kerja skripsi.\\
+		{\bf hasil :} Penulisan skripsi sampai bab 2
+
+	\end{enumerate}
+
+\section{Pencapaian Rencana Kerja}
+Persentase penyelesaian skripsi sampai dengan dokumen ini dibuat dapat dilihat pada tabel berikut :
+
+\begin{center}
+  \begin{tabular}{ | c | c | c | c | l | c |}
+    \hline
+    1*  & 2*(\%) & 3*(\%) & 4*(\%) &5* &6*(\%)\\ \hline \hline
+    1   & 13  & 13  &    &  & 13\\ \hline
+    2   & 8   & 8   &    &  &  8\\ \hline
+    3   & 6   & 6   &    &  & \\ \hline
+    4   & 6   & 4   & 2  & {\footnotesize menyesuaikan input dengan program di S2} & \\ \hline
+    5   & 15  & 5   & 10 & {\footnotesize sudah menentukan jenis tweet seperti apa di S1} &\\ \hline
+    6   & 10  &     & 10 &  & \\ \hline
+    7   & 16  &  6  & 10 & {\footnotesize input mulai dicari dari S1} &\\ \hline
+    8   & 10  &     & 10 &  &\\ \hline
+    9   & 16  & 8   & 8  & {\footnotesize sebagian bab 1 dan 2, serta bagian awal analisis di S1} & 5\\ \hline
+    Total  & 100  & 50  & 50 & & 26 \\ \hline
+                          \end{tabular}
+\end{center}
+
+Keterangan (*)\\
+1 : Bagian pengerjaan Skripsi (nomor disesuaikan dengan detail pengerjaan di bagian 5)\\
+2 : Persentase total \\
+3 : Persentase yang akan diselesaikan di Skripsi 1 \\
+4 : Persentase yang akan diselesaikan di Skripsi 2 \\
+5 : Penjelasan singkat apa yang dilakukan di S1 (Skripsi 1) atau S2 (skripsi 2)\\
+6 : Persentase yang sidah diselesaikan sampai saat ini 
+
+\vspace{1cm}
+\centering Bandung, \tanggal\\
+\vspace{2cm} \nama \\ 
+\vspace{1cm}
+
+Menyetujui, \\
+\ifdefstring{\jumpemb}{2}{
+\vspace{1.5cm}
+\begin{centering} Menyetujui,\\ \end{centering} \vspace{0.75cm}
+\begin{minipage}[b]{0.45\linewidth}
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013 \\
+\vspace{2cm} Nama: \pembA \\ Pembimbing Utama
+\end{minipage} \hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013\\
+\vspace{2cm} Nama: \pemB \\ Pembimbing Pendamping
+\end{minipage}
+\vspace{0.5cm}
+}{
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013\\
+\vspace{2cm} Nama: \pembA \\ Pembimbing Tunggal
+}
+`
+\end{document}
