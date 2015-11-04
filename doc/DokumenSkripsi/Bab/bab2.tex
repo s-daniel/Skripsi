@@ -4,7 +4,7 @@ Twitter adalah sebuah jaringan informasi yang terdiri dari pesan-pesan sepanjang
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{Gambar/mine/twittercity}
-\caption[Top 20 cities by number of posted tweets, dari Semiocast]{Top 20 cities by number of posted tweets, dari Semiocast} 
+\caption[Top 20 cities by number of posted tweets, dari \cite{Semiocast20Cities:2012}]{Top 20 cities by number of posted tweets, dari \cite{Semiocast20Cities:2012}} 
 \label{fig:num_post_tweet}
 \end{figure}
 Tingginya popularitas Twitter dapat dimanfaatkan untuk berbagai keperluan dalam berbagai aspek. Contohnya sebagai sarana komunikasi, memberikan opini, kampanye poilitik, bisnis, mendapatkan informasi, dan banyak lainya.
@@ -76,7 +76,7 @@ Dalam OAuth didefinisikan ada 4 peran:
 \end{enumerate}
 \section{Twitter4J}
 Twitter4j adalah sebuah Java library untuk Twitter API bersifat \textit{open source} dan gratis. Dengan Twitter4j, \textit{user} dapat dengan mudah mengintegrasikan aplikasi Java dengan Twitter service. Twitter4j dapat di unduh pada situs \url{http://twitter4j.org} \cite{Twitter4j:2015}. Berikut beberapa kelas yang dimiliki oleh Twitter4j:\\\\
-\textbf{Twitter} adalah sebuah \textit{interface} yang digunakan untuk membungkus Twitter REST API. Method yang dimiliki kelas ini sebagai berikut:
+\textbf{Twitter} adalah sebuah \textit{interface} yang digunakan untuk membungkus Twitter REST API. Method yang dimiliki \textit{interface} ini sebagai berikut:
 \begin{enumerate}
 	\item \textbf{TimelinesResources timelines()}\\
 	Berfungsi mendapatkan objek TimelinesResources\\
@@ -94,7 +94,7 @@ Twitter4j adalah sebuah Java library untuk Twitter API bersifat \textit{open sou
 	Berfungsi menginstansiasi kelas Twitter hanya satu kali.\\
 	\textbf{Kembalian} instansiasi default singleton Twitter 
 \end{enumerate}
-\textbf{TwitterStream} adalah sebuah \textit{interface} yang digunakan untuk membungkus Twitter Streaming API. Method yang dimiliki kelas ini sebagai berikut:
+\textbf{TwitterStream} adalah sebuah \textit{interface} yang digunakan untuk membungkus Twitter Streaming API. Method yang dimiliki \textit{interface} ini sebagai berikut:
 \begin{enumerate}
 	\item \textbf{void addListener(StreamListener listener)}\\
 	Berfungsi menambahkan \textit{listener}.\\
@@ -156,7 +156,7 @@ Twitter4j adalah sebuah Java library untuk Twitter API bersifat \textit{open sou
 	\textbf{Parameter} since - String\\
 	\textbf{Kembalian} void
 \end{enumerate}
-\textbf{Status} adalah sebuah \textit{interface} yang merepresentasikan sebuah status dari seorang \textit{user}. Method yang dimiliki kelas ini sebagai berikut:
+\textbf{Status} adalah sebuah \textit{interface} yang merepresentasikan sebuah status dari seorang \textit{user}. Method yang dimiliki \textit{interface} ini sebagai berikut:
 \begin{enumerate}
 	\item \textbf{java.util.Date getCreatedAt()}\\
 	Berfungsi untuk mengetahui tanggal status tersebut dibuat.\\
@@ -174,7 +174,7 @@ Twitter4j adalah sebuah Java library untuk Twitter API bersifat \textit{open sou
 	Berfungsi untuk mengetahui user yang terasosiasi dengan status.\\
 	\textbf{Kembalian}user yang terasosiasi dengan status.
 \end{enumerate}
-\textbf{StatusListener} adalah sebuah \textit{interface} yang merepresentasikan bagaimana status yang dilisten akan ditangani. Method yang dimiliki kelas ini sebagai berikut:
+\textbf{StatusListener} adalah sebuah \textit{interface} yang merepresentasikan bagaimana status yang dilisten akan ditangani. Method yang dimiliki \textit{interface} ini sebagai berikut:
 \begin{enumerate}
 	\item \textbf{void onDeletion}\\
 	Berfungsi menangani ketika \textit{deletionNotices} disampaikan.\\
@@ -253,7 +253,7 @@ Ada dua nilai yang harus dipertimbangkan dalam menentukan rata-rata galat untuk\
 \end{displaymath}
 Dimana n adalah jumlah pasangan masukan dan keluaran, aktual adalah keluaran yang dihasilkan oleh JST, dan ideal adalah keluaran yang diinginkan. Dengan mengetahui rata-rata galat dari keluaran yang diharapkan dan yang sebenarnya, kita dapat menentukan apakah JST tersebut sudah cukup baik atau belum.
 \subsection{Feedforward Neural Network}
-Feedforward adalah sebuah arsitektur JST yang populer dan banyak digunakan sebagai model dalam banyak penerapan. Feedforward dikenal juga sebagai ``multi-layer perceptron''. Dalam JST feedforward, setiap layer dari JST mengandung hubungan ke layer berikutnya (contohnya dari layer masukan dihubungkan ke layer tersembunyi) ilustrasi feedforward pada gambar \ref{fig:ffnn}. Hubungan antar neuron pada feedforward hanya satu arah. Feedfoward selalu dimulai dari layer masukan. Jika masukan terhubung dengan sebuah layer tersembunyi, layer tersembunyi dapat terhubung dengan layer tersembunyi lainya atau dapat langsung terhubung dengan layer keluaran. Jumlah layer tersembunyi bisa banyak. Kebanyakan JST biasanya akan memiliki satu buah layer tersembunyi, dan akan sangat jarang JST memiliki lebih dari dua buah layer tersembunyi.\\
+Feedforward adalah sebuah arsitektur JST yang populer dan banyak digunakan sebagai model dalam banyak penerapan. Feedforward dikenal juga sebagai ``multi-layer perceptron''. Dalam JST feedforward, setiap layer dari JST mengandung hubungan ke layer berikutnya (contohnya dari layer masukan dihubungkan ke layer tersembunyi) ilustrasi feedforward pada gambar \ref{fig:ffnn} menunjukan sebuah JST yang terdiri dari 3 lapisan (\textit{input, hidden,} dan \textit{output} )setiap layer memiliki jumlah neuron yang berbeda beda pada \textit{input layer} terdiri dari 2 neuron, pada \textit{hidden layer} terdiri 3 neuron, dan pada \textit{output layer} hanya ada 1 neuron. Hubungan antar neuron pada feedforward hanya satu arah. Feedfoward selalu dimulai dari layer masukan. Jika masukan terhubung dengan sebuah layer tersembunyi, layer tersembunyi dapat terhubung dengan layer tersembunyi lainya atau dapat langsung terhubung dengan layer keluaran. Jumlah layer tersembunyi bisa banyak. Kebanyakan JST biasanya akan memiliki satu buah layer tersembunyi, dan akan sangat jarang JST memiliki lebih dari dua buah layer tersembunyi.\\
 \begin{figure}
 	\centering
 	\includegraphics[width=0.6\linewidth]{Gambar/mine/ffnn}
@@ -310,65 +310,9 @@ Kurva \ref{fig:k_tangent} menggambarkan fungsi Hyperbolic Tangent dimana nilai y
 \subsection{Backpropagation}
 \textit{Backpropagation} adalah salah satu metode untuk melakukan pelatihan pada jaringan feedforward yang memiliki beberapa layer. \textit{Backpropagation} dapat digunakan untuk setiap jaringan feedforward yang menggunakan sebuah fungsi aktivasi yang dapat diturunkan. Pada backpropagation bobot setiap penghubung antar neuron akan dirubah agar JST dapat menghasilkan keluaran yang diharapkan sesedikit mungkin mengalami kesalahan.\\\\ 
 \section{Database Management System}
-\subsection{Fungsi dan karakteristik DBMS}
-Secara tradisional pengorganisasian data biasanya dalam format file. Karena banyak kekurangan yang dimiliki dari pengorgansiasian tradisional (format file), maka dirancanglah sebuah konsep baru bernama Database Managment System (DBMS) untuk menutupi kekurangan penyimpanan tradisional \cite{DBMS:2015}.  Pada DBMS modern memiliki karakteristik sebagai berikut :
-\begin{enumerate}
-	\item \textbf{Real-world entity} : DBMS modern dirancang agar lebih realistik dengan menggunakan entitas yang berada di dunia nyata untuk merancang arsitekturnya. DBMS juga memiliki atribut dan kebiasaan dari entitas itu sendiri.
-	\item \textbf{Relation-based tables} : DBMS memperbolehkan hubungan antar entitas kedalam bentuk tabel. Dengan hal tersebut pengguna dapat mengerti arsitektur dari basis data hanya dengan  melihat nama-nama tabelnya.
-	\item \textbf{Isolation of data and application} : Sistem basis data seluruhnya berbeda dari datanya. Sebuah basis data adalah sebuah entitas aktif, sedangkan datanya adalah entitas pasif. DBMS menyediakan metadata, yaitu data mengenai data.
-	\item \textbf{Less redundancy} : DBMS mengikuti peraturan normalisasi, dimana membagi sebuah relasi ketika atribut unik dari entitas tersebut memiliki nilai yang sama.
-	\item \textbf{Consistency} : Konsistensi adalah status dimana setiap relasi dalam basis data tetap sesuai dengan yang seharusnya (tidak terjadi perubahan yang membingungkan). Pada DBMS ada beberapa metode dan teknik, yang dapat mendeteksi ketidak konsistenan data. 
-	\item \textbf{Query Language} : DBMS diperlengkapi dengan bahasa query, yang membuat DBMS lebih efisien ketika ingin mendapatkan dan memanipulasi data.  
-	\item \textbf{ACID Properties} : DBMS menerapkan perinsip \textbf{A}tomicity, \textbf{C}onsitency, \textbf{I}solation, \textbf{D}urabillity (Disingkat ACID). Dengan menerapkan prinsip ACID, membantu basis data tetap sehat dalam menangani banyak transaksi data. 
-	\item \textbf{Concurrent Access} : DBMS mendukung multi-user dalam mengakses dan memanipulasi data dalam waktu yang bersamaan.
-	\item \textbf{Security} : DBMS menawarkan banyak perbedaan level keamanan. Hal ini dapat membatasi setiap user dalam mengakses dan memanipulasi data.
-\end{enumerate} 
-\subsection{Data Model}
-Data model mendefinisikan bagaimana struktur logika dari basis data di modelkan. Data model juga mendefinisikan bagaimana setiap data terhubung dengan yang lain dan bagaimana data diproses dan disimpan didalam sistem \cite{DBMS:2015}. Data model yang pertama kali digunakan adalah flat data-model, dimana semua data yang digunakan disimpan didalam tempat yang sama dan menyebabkan banyak duplikasi dan pembaruan yang anomali. Karena banyak kelemahan yang dimiliki flat data-model makan dirancang data model yang diharapkan lebih baik diantaranya :\\\\
-\textbf{Entity-Relationship Model}\\
-Entity-Relationship (ER) Model diciptakan berdasarkan karakteristik DBMS dari Real-World Entities dan hubungan antar entitasnya. Untuk memodelkan Real-World Entites kedalam DBMS dibutukah sebuah model konseptual, maka digunakanlah ER Model. Pada gambar \ref{fig:erd} menunjukan konsep ER Model.
-	\begin{figure}
-	\centering
-	\includegraphics[width=0.6\linewidth]{Gambar/mine/erd}
-	\caption[ER Model, dari \cite{DBMS:2015}]{ER Model, dari \cite{DBMS:2015}} 
-	\label{fig:erd}
-	\end{figure}
-\begin{enumerate}
-	\item \textbf{Entity}\\
-	\textit{Entity} atau entitas dalam ER Model adalah sebuah entitas di dunia nyata yang memiliki sifat disebut \textbf{attribute} atau atribut. Setiap atribut di definisikan oleh sekumpulan nilai yang disebut \textbf{domain}.
-	\item \textbf{Relationship}\\
-	Asosiasi logika antar entitas disebut \textbf{relationship}. Relationship dipetakan dengan entitas dengan cara yang bervariasi. Untuk memetakan kardinalitas antar entitas dapat didefinisikan dengan angka dari asosiasi diantara kedua entitas. Jenis pemetaan kardinalitas diantaranya \textit{one to one, one to many, many to one, many to many}.
-\end{enumerate}
-\textbf{Relational Model}\\
-Relational model adalah pengorganisasian data kedalam sekumpulan tabel yang datanya dapat di akses atau dirakit kembali kedalam banyak cara tanpa harus melakukan organisasikan kembali pada tabel database Gambar \ref{fig:relational} menunjukan contoh relational model \cite{RelationDefinition:2001}. Setiap table (atau kadang disebut relasi) mengandung satu atau lebih kategori data dalam kolom (\textit{attribute}). Setiap baris (\textit{tuples}) mengandung instansiasi yang unik dari data. Keuntungan menggunakan relational model daripada model lainya :
-\begin{enumerate}
-	\item Berdasarkan pengertian matematika relasi dan himpunan, sehingga dapat menggunakan abstraksi matematika.
-	\item Menggunakan struktur data yang sederhana, mudah dimengerti.
-	\item Membagi level logis dan level fisikal. 
-	\item Operasi tidak perlu mengerti struktur data yang digunakan.
-\end{enumerate}
-	\begin{figure}
-	\centering
-	\includegraphics[width=0.6\linewidth]{Gambar/mine/relational}
-	\caption[Model Relational, dari \cite{RelationDefinition:2001}]{Model Relational, dari \cite{RelationDefinition:2001}} 
-	\label{fig:relational}
-	\end{figure}
-\subsection{SQL}
-SQL kepanjangan dari Structured Query Language adalah sebuah bahasa standard untuk mengakses dan memanipulasi basis data. SQL adalah sebuah standard ANSI(American National Standards Institute). Dengan menggunakan \textit{statement} SQL kita dapat memanipulasi sebuah basis data. Setiap \textit{statement} memiliki sintaksis. Berikut beberapa sintaksis dasar dan fungsinya :
-\begin{enumerate}
-	\item SELECT columnNname, columnNname FROM tableName WHERE columnName operator value \\ Berfungsi mengambil data berdasarkan kolom dari sebuah Tabel dengan kondisi dimana nilai dari column tersebut memenuhi suatu nilai.
-	\item INSERT INTO tableName VALUES value1,value2,value3,...\\
-Berfungsi memasukan nilai-nilai kedalam sebuah table atau relasi.
-	\item UPDATE tableName SET column1=value1,column2=value2,... WHERE someColumn=someValue\\
-Berfungsi merubah nilai-nilai pada sebuah table di sebuah \textit{tuple} yang memenuhi sebuah kriteria
-	\item DELETE FROM tableName WHERE someColumn=someValue\\
-	Berfungsi menghapus sebuah \textit{tuple} yang memiliki kriteria tertentu
-\end{enumerate}
-\subsection{MySQL}
-MySQL adalah salah satu Relational DBMS \textit{open source} yang paling populer di dunia. MySQL dapat membantu pengembang mendapatkan aplikasi basis data yang memiliki performa tinggi, \textit{scalable} dan \textit{cost-effectively}. MySQL menyediakan edisi gratis dan komersial. Edisi Gratis MySQL dapat diunduh bersama Apache dan PHP dalam paket XAMPP di situs \url{https://www.apachefriends.org/index.html}.
 \subsection{JDBC}
 JDBC adalah sebuah API yang di rancang untuk menghubungkan basis data SQL dengan pemograman berbahasa Java. JDBC menyediakan metode untuk melakukan \textit{query} dan \textit{updating} data kedalam database. JDBC berorientasi dengan basis data relasional. Berikut beberapa kelas yang dimiliki oleh JDBC:\\
-\textbf{Connection} adalah sebuah interface yang berfungsi melakukan koneksi dengan sebuah spesifik basis data. Method yang dimiliki kelas ini sebagai berikut:
+\textbf{Connection} adalah sebuah \textit{interface} yang berfungsi melakukan koneksi dengan sebuah spesifik basis data. Method yang dimiliki \textit{interface} ini sebagai berikut:
 \begin{enumerate}
 	\item \textbf{Statement createStatement()}\\
 	Berfungsi membuat sebuah objek Statement untuk mengirimkan SQL statments kedalam basis data.\\
@@ -391,7 +335,7 @@ JDBC adalah sebuah API yang di rancang untuk menghubungkan basis data SQL dengan
 Berfungsi melakukan eksekusi terhadap query
 \textbf{Kembalian} void
 \end{enumerate}
-\textbf{Statement} Adalah sebuah interface yang berfungsi mengeksekusi perintah SQL statik dan mengembalikan hasil perintah tersebut. Method yang dimiliki kelas ini sebagai berikut:
+\textbf{Statement} Adalah sebuah \textit{interface} yang berfungsi mengeksekusi perintah SQL statik dan mengembalikan hasil perintah tersebut. Method yang dimiliki \textit{interface} ini sebagai berikut:
 \begin{enumerate}
 	\item \textbf{ResultSet executeQuery(String sql)}\\
 	Berfungsi mengeksekusi perintah SQL yang diberikan.\\
