@@ -244,7 +244,7 @@ Ada banyak cara untuk membuat JST dapat belajar. Setiap algoritma pembelajaran n
 	\label{fig:s_learning}
 	\end{figure}
 \end{enumerate}
-\subsection{Perhitungan Galat}
+\subsection{Perhitungan Galat (\textit{Error})}
 Perhitungan galat adalah salah satu aspek penting dari setiap pelatihan JST. Apakah pelatihan itu adalah\textit{ supervised }atau \textit{unsupervised}, sebuah rata-rata galat harus dihitung. Tujuan dari setiap algoritma pelatihan ialah untuk meminimalisasi rata-rata galat.
 \subsubsection{Perhitungan Galat dan\textit{ supervised }Training}
 Ada dua nilai yang harus dipertimbangkan dalam menentukan rata-rata galat untuk\textit{ supervised training}. Pertama kita harus menghitung galat untuk setiap element pelatihan. Kedua, kita harus menghitung rata-rata galat untuk semua element pelatihan untuk setiap sampel. (Root Mean Square) RMS adalah salah satu metode untuk menghitung rata-rata galat untuk sebuah pelatihan. Metode RMS efektif dalam perhitungan rata-rata galat, tanpa memperhatikan apakah hasil yang sebenarnya lebih tinggi atau lebih kecil daripada hasil yang diharapkan. Untuk menghitung RMS digunakan formula. 
@@ -275,7 +275,7 @@ Secara teori tidak ada alasan untuk menggunakan layer tersembunyi lebih dari dua
 \hline
 Jumlah Hidden Layer & Kegunaan \\\hline
 tidak ada & Hanya dapat merepresentasikan fungsi linear atau pemilihan linear.\\\hline
-1 & Dapat memeperikaran semua fungsi yang mengandung pemetaan kontinu dari satu \textit{space} terbatas ke yang lainya.\\\hline
+1 & Dapat memperikaran semua fungsi yang mengandung pemetaan kontinu dari satu \textit{space} terbatas ke yang lainya.\\\hline
 2 & Dapat merepresentasikan sebuah keputusan yang  batasanya dan akurasi yang berubah-ubah dengan fungsi aktivasi rasional dan dapat memperkirakan setiap pemetaan halus untuk akurasi apapun.\\\hline
 \end{tabular}
 \end{table}

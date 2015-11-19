@@ -1,0 +1,115 @@
+body{
+	background-color:#f2f2f2;
+	font-family: Oswald,Arial,sans-serif!important;
+	margin:0px;
+	background-image:url("img/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	font-size:25px;
+}
+#searchBar{
+	width:98%;
+}
+#search{
+	background-color:#55ACEE;
+	width:180px;
+	color:white;
+}
+a{
+	color:#777;
+}
+#logo{
+	width:50px;
+}
+#content{
+	width:100%;
+	opacity:0.8;
+	background-color:white;
+	margin:auto;
+}
+#nav{
+	width:100%;
+	background-color:#55ACEE;
+	height:80px;
+}
+.ganjil{
+	background-color:#E7F5FF;
+}
+#content h2{
+	width:100%;
+	background-color:#55ACEE;
+	font-weight:normal;
+	color:white;
+	text-align:center;
+	font-size:35px;
+}
+table{
+	margin:auto;
+	font-size:35px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	background-color:white;
+}
+td,th{
+	padding:10px;
+	border:1px solid #ddd;
+}
+th{
+	font-weight:normal;
+	color:white;
+	background-color:#55ACEE;
+}
+#total{
+	margin:auto;
+	text-align:center;
+}
+tr:hover td{
+	background-color:#ddd;
+	cursor:pointer;
+}
+td div{
+	display:inline-block;
+	width:100%;
+}
+.date{
+	font-size:15px;
+	color:#555;
+}
+input,option,select{
+	font-size:50px;
+	font-family: Oswald,Arial,sans-serif!important;
+}	
+select{
+	width:100%;
+}
+#buttonDiv{
+	margin:auto;
+	text-align:center;
+}
+input{
+	width:120px;
+	margin-left:10px;
+}
+#junkBut{
+	color:white;
+	background-color:#F74D50;
+}
+#saveBut{
+	color:white;
+	background-color:#B3DE6A;
+}
+a{
+	text-decoration:none !important;
+}
+.navBut{
+	padding:10px;
+	
+	color:white;
+	font-size:40px;
+}
+#remove{
+	background-color:#F74D50;
+}
+#process{
+	background-color:#B3DE6A;
+}
